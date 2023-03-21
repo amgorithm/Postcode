@@ -35,6 +35,17 @@ export async function login(req, res) {
   }
 }
 
+export async function updateUserAbout(req, res, next) {
+  try {
+    const updatedAbout = await Post.findByIdAndUpdate(req.params.id, req.body, {
+      new: true,
+    });
+    res.json(updatedAbout);
+  } catch (error) {
+    next(error);
+  }
+}
+
 /*----- Helper Functions -----*/
 
 function createJWT(user) {

@@ -1,11 +1,16 @@
 import express from "express";
-import * as usersCtrl from "../../controllers/users.js";
+import * as userController from "../../controllers/userController.js";
+import postController from "../../controllers/postController.js";
+import { checkAuth } from "../../middleware/auth.js";
 
 const router = express.Router();
 /*---------- Public Routes ----------*/
-router.post("/signup", usersCtrl.signup);
-router.post("/login", usersCtrl.login);
+router.post("/signup", userController.signup);
+router.post("/login", userController.login);
 
-/*---------- Protected Routes ----------*/
+router
+  .route("/:id")
+  .get(postController.getAllPosts)
+  .patch(checkAuth, userController.updateUserAbout);
 
 export default router;

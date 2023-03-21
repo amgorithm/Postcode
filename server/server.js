@@ -8,9 +8,11 @@ import cors from "cors";
 import dotenv from "dotenv";
 
 import userRoutes from "./routes/api/users.js";
+import postRoutes from "./routes/api/posts.js";
 import auth from "./config/auth.js";
 
 import { connectToDb } from "./config/database.js";
+import errorHandling from "./middleware/errorHandling.js";
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
 
@@ -29,11 +31,13 @@ app.use(express.static(join(__dirname, "..", "client", "build")));
 
 // Put API routes here, before the "catch all" route
 app.use("/api/users", userRoutes);
+app.use("/api/posts", postRoutes);
 
 app.get("/*", function (req, res) {
   res.sendFile(path.join(__dirname, "..", "client", "build", "index.html"));
 });
 
+app.use(errorHandling);
 const port = process.env.PORT || 3001;
 
 async function startServer() {
