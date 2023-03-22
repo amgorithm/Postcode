@@ -37,7 +37,7 @@ export async function login(req, res) {
 
 export async function updateUserAbout(req, res, next) {
   try {
-    const updatedAbout = await Post.findByIdAndUpdate(req.params.id, req.body, {
+    const updatedAbout = await User.findByIdAndUpdate(req.params.id, req.body, {
       new: true,
     });
     res.json(updatedAbout);
