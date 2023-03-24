@@ -10,6 +10,8 @@ const NavBar = () => {
     <div>
       <span className="NavBar-welcome">WELCOME, {user.name}</span>
       &nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+      <NavLink to="/post/new">New</NavLink>
+      &nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
       <NavLink to="" className="NavBar-link" onClick={handleLogout}>
         Log out
       </NavLink>
