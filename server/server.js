@@ -30,8 +30,8 @@ app.use(favicon(join(__dirname, "..", "client", "build", "favicon.ico")));
 app.use(express.static(join(__dirname, "..", "client", "build")));
 
 // Put API routes here, before the "catch all" route
-app.use("/api/users", userRoutes);
-app.use("/api/posts", postRoutes);
+app.use("/api/v1/users", userRoutes);
+app.use("/api/v1/posts", postRoutes);
 
 app.get("/*", function (req, res) {
   res.sendFile(path.join(__dirname, "..", "client", "build", "index.html"));
