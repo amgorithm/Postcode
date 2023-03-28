@@ -8,10 +8,11 @@ function UserPosts() {
   let navigate = useNavigate();
 
   const [posts, setPosts] = useState([]);
-  console.log(posts);
+  // console.log(posts);
   useEffect(() => {
     if (!user) {
       navigate("/");
+      return;
     }
     async function getUserPosts() {
       const posts = await getPosts(user._id);
@@ -27,7 +28,7 @@ function UserPosts() {
           {posts.map((post) => (
             <div key={post._id}>
               <div>
-                <Link to={`/posts/detail/${post._id}`}>{post.title}</Link>
+                <Link to={`/post/detail/${post._id}`}>{post.title}</Link>
               </div>
               <div>
                 <p>{post.body}</p>
