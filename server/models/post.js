@@ -5,18 +5,12 @@ const postSchema = new mongoose.Schema(
     title: {
       type: String,
       required: true,
-      maxLength: [
-        60,
-        "Title cannot exceed 60 characters, your title has {value} characters",
-      ],
+      maxLength: [60, "Your title has exceeded the 60 characters limit."],
     },
     body: {
       type: String,
       required: true,
-      maxLength: [
-        650,
-        "Post body cannot exceed 650 characters, your post body has {value} characters",
-      ],
+      maxLength: [650, "Your post has exceeded the 650 characters limit."],
     },
     author: { type: mongoose.Schema.ObjectId, ref: "User" },
   },

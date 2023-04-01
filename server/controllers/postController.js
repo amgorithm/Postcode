@@ -1,6 +1,7 @@
 import Post from "../models/post.js";
 import User from "../models/user.js";
 import { CastError } from "mongoose";
+import mongoose from "mongoose";
 
 async function createPost(req, res, next) {
   const userId = req.user._id;
@@ -12,8 +13,18 @@ async function createPost(req, res, next) {
     await user.save();
     res.json(createdPost);
   } catch (error) {
-    // res.status(400).send({ error: "You must provide a title and body. " });
-    res.status(400).json(error);
+    if (error instanceof mongoose.Error.ValidationError) {
+      return res.status(400).json({
+        error: true,
+        message:
+          "A validation error has occurred. A post must have a title that does not exceed 60 characters and a body that does not exceed 650 characters. Check again.",
+      });
+    }
+
+    res.status(400).json({
+      error: true,
+      message: "An error occurred while creating the post.",
+    });
   }
 }
 
