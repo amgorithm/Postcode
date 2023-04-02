@@ -39,6 +39,7 @@ function AddPost() {
             value={createdPost.title}
             onChange={handleChange}
             className="title"
+            maxLength={60}
           />
           <label>Body:</label>
           <textarea
@@ -46,6 +47,7 @@ function AddPost() {
             value={createdPost.body}
             onChange={handleChange}
             className="body"
+            maxLength={650}
           />
 
           <button disabled={isFormInvalid()}>Add</button>

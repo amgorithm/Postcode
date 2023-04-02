@@ -48,6 +48,7 @@ function EditPost() {
           value={post.title}
           onChange={handleChange}
           className="title"
+          maxLength={60}
         />
         <label>Body:</label>
         <textarea
@@ -55,6 +56,7 @@ function EditPost() {
           value={post.body}
           onChange={handleChange}
           className="body"
+          maxLength={650}
         />
         <button disabled={isFormInvalid()}>Add</button>
       </form>
