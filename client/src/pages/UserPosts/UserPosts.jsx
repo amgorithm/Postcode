@@ -23,6 +23,10 @@ function UserPosts() {
 
   return (
     <div>
+      <div>
+        <Link to={`/post/new/`}>New post</Link>
+      </div>
+      <br />
       {posts && posts.length > 0 ? (
         <article>
           {posts.map((post) => (

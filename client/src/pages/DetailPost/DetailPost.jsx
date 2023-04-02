@@ -34,6 +34,7 @@ function DetailPost() {
       {post.length !== 0 ? (
         <article>
           <div>
+            <h2>{post.title}</h2>
             <p>{post.body}</p>
           </div>
         </article>
