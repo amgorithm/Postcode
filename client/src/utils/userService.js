@@ -38,6 +38,24 @@ function login(creds) {
     .then(({ token }) => tokenService.setToken(token));
 }
 
+export const updateAbout = async (userAbout, userID) => {
+  try {
+    const token = tokenService.getToken();
+    let response = await fetch(`/api/v1/users/${userID}`, {
+      method: "PATCH",
+      headers: {
+        "content-type": "application/json",
+        Authorization: "Bearer " + token,
+      },
+      body: JSON.stringify(userAbout),
+    });
+
+    return response.json();
+  } catch (error) {
+    console.log(error);
+  }
+};
+
 const exports = {
   signup,
   getUser,

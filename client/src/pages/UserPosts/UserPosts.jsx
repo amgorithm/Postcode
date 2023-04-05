@@ -8,7 +8,8 @@ function UserPosts() {
   let navigate = useNavigate();
 
   const [posts, setPosts] = useState([]);
-  // console.log(posts);
+  const [userDetails, setUserDetails] = useState([]);
+
   useEffect(() => {
     if (!user) {
       navigate("/");
@@ -17,6 +18,7 @@ function UserPosts() {
     async function getUserPosts() {
       const posts = await getPosts(user._id);
       setPosts(posts.posts);
+      setUserDetails(posts.about);
     }
     getUserPosts();
   }, [user]);
@@ -24,6 +26,13 @@ function UserPosts() {
   return (
     <div>
       <div>
+        <h2> {user.name} </h2>
+        <Link to={`/user/edit/${user._id}`}>Edit</Link>
+      </div>
+      <div>{userDetails ? <p>{userDetails}</p> : null}</div>
+
+      <div>
+        <hr />
         <Link to={`/post/new/`}>New post</Link>
       </div>
       <br />
