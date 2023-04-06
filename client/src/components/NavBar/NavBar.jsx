@@ -1,5 +1,5 @@
 import React from "react";
-import { NavLink } from "react-router-dom";
+import { NavLink, Link } from "react-router-dom";
 import useUser from "../../hooks/useUser";
 import "./NavBar.css";
 
@@ -8,27 +8,33 @@ const NavBar = () => {
 
   let nav = user ? (
     <div>
-      <span className="NavBar-welcome">WELCOME, {user.name}</span>
-      &nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
-      <NavLink to="/posts">Posts</NavLink>
-      &nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
-      <NavLink to="" className="NavBar-link" onClick={handleLogout}>
+      <NavLink to="/posts" className="NavBar-link left">
+        Posts
+      </NavLink>
+      <NavLink to="" className="NavBar-link right" onClick={handleLogout}>
         Log out
       </NavLink>
     </div>
   ) : (
     <div>
-      <NavLink to="/login" className="NavBar-link">
+      <NavLink to="/login" className="NavBar-link left">
         Log in
       </NavLink>
-      &nbsp;&nbsp;|&nbsp;&nbsp;
-      <NavLink to="/signup" className="NavBar-link">
+
+      <NavLink to="/signup" className="NavBar-link right">
         Sign up
       </NavLink>
     </div>
   );
 
-  return <div className="NavBar">{nav}</div>;
+  return (
+    <div className="NavBar">
+      <NavLink to="/" className="postcode">
+        <h1>Postcode</h1>
+      </NavLink>
+      <div>{nav}</div>
+    </div>
+  );
 };
 
 export default NavBar;

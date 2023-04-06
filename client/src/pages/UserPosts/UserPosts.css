@@ -1,0 +1,66 @@
+.userposts-container {
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+/* User edit */
+.user-edit {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+.edit {
+  height: 20px;
+}
+
+.user-edit h2 {
+  font-size: 18px;
+}
+
+hr {
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.hr {
+  border: 1px solid #e0e0e0;
+  border-radius: 5px;
+}
+
+/* Posts */
+.new-entry {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-bottom: 20px;
+}
+
+.add {
+  text-transform: uppercase;
+}
+
+.add-nav {
+  height: 15px;
+
+  padding-left: 5px;
+}
+.add-nav {
+  padding-top: 3px;
+}
+
+.title-date {
+  display: flex;
+  justify-content: space-between;
+}
+
+.title-date h4 {
+  font-size: 16px;
+  font-weight: normal;
+}
+
+.post-title {
+  padding-bottom: 10px;
+}

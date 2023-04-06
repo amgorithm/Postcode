@@ -23,9 +23,6 @@ function App() {
   return (
     <div>
       <header className="header">
-        <Link to="/">
-          <h1>Postcode</h1>
-        </Link>
         <NavBar />
       </header>
       <main>
