@@ -1,0 +1,61 @@
+.post-container {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+.post-detail-title {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  text-align: center;
+  margin: 20px 0px;
+  /* padding-top: 20px; */
+}
+
+.title {
+  font-size: 18px;
+  margin: 20px 0px;
+}
+
+.date {
+  font-size: 16px;
+  /* padding-top: 15px; */
+}
+
+.date-modify {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 30px;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+.date-modify .edit {
+  height: 25px;
+}
+
+.delete {
+  border: none;
+  background: none;
+  margin: 0;
+  padding: 0;
+  font: inherit;
+  color: inherit;
+  cursor: pointer;
+}
+
+.trash {
+  height: 20px;
+  margin-bottom: 2px;
+  padding-left: 5px;
+}
+
+.post-body {
+  margin-top: 10px;
+  padding-left: 20px;
+  padding-right: 20px;
+}
