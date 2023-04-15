@@ -12,7 +12,7 @@ const NavBar = () => {
         Posts
       </NavLink>
       <NavLink to="" className="NavBar-link right" onClick={handleLogout}>
-        Log out
+        Logout
       </NavLink>
     </div>
   ) : (

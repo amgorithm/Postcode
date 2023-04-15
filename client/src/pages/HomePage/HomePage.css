@@ -1,0 +1,50 @@
+.homepage {
+  text-align: center;
+  padding-bottom: 50px;
+}
+
+.homepage-top {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #332f50;
+  padding-top: 50px;
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-bottom: 50px;
+}
+
+.typing {
+  width: 280px;
+}
+
+.homepage-top h2 {
+  color: white;
+}
+
+.homepage-top h3 {
+  color: #7d8590;
+}
+
+.homepage-bottom {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding-top: 50px;
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-bottom: 50px;
+  background-color: white;
+}
+.homepage-bottom h2 {
+  font-size: 30px;
+}
+
+.benefits {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 15px;
+  max-width: 800px;
+}

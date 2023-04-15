@@ -25,7 +25,7 @@ function LoginPage() {
     try {
       await userService.login(formState);
       handleSignupOrLogin();
-      navigate("/");
+      navigate("/posts");
     } catch (err) {
       // Use a modal
       alert("Invalid Credentials!");
