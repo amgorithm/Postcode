@@ -20,9 +20,8 @@ function HomePage() {
       <div className="homepage-bottom">
         <h2>Why a coding journal?</h2>
         <h3>
-          Keeping a coding journal will not only make your life easier as a
-          software developer, but it will help you grow on a personal and
-          professional level{" "}
+          By keeping a coding journal, you can make your life as a Software
+          Developer easier and achieve personal and professional growth{" "}
         </h3>
         <div className="benefits">
           <div>
@@ -45,7 +44,7 @@ function HomePage() {
             <p>Look back on your successes and troubles</p>
           </div>
           <div>
-            <h4>Stay organised</h4>
+            <h4>Organise</h4>
             <p>Document your ideas and progress</p>
           </div>
         </div>

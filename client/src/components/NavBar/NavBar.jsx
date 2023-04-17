@@ -18,11 +18,11 @@ const NavBar = () => {
   ) : (
     <div>
       <NavLink to="/login" className="NavBar-link left">
-        Log in
+        Login
       </NavLink>
 
       <NavLink to="/signup" className="NavBar-link right">
-        Sign up
+        Register
       </NavLink>
     </div>
   );

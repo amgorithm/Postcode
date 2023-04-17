@@ -1,7 +1,5 @@
-.SignupPage {
-  display: flex;
-  flex-flow: column nowrap;
-  justify-content: center;
-  align-items: center;
-  margin-bottom: 50px;
+.signup-err-msg {
+  text-align: center;
+  padding: 0 35px;
+  color: #332f50;
 }

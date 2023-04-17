@@ -11,7 +11,9 @@ function signup(user) {
     .then((res) => {
       if (res.ok) return res.json();
 
-      throw new Error("Email already taken!");
+      throw new Error(
+        "Something went wrong. Please check that your username and email are unique."
+      );
     })
 
     .then(({ token }) => tokenService.setToken(token));

@@ -32,7 +32,7 @@ function AddPost() {
   return (
     <div>
       <div>
-        <form onSubmit={handleSubmit}>
+        <form className="addPost" onSubmit={handleSubmit}>
           <label>Title:</label>
           <input
             name="title"

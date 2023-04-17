@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import "./LoginPage.css";
 import userService from "../../utils/userService";
@@ -12,6 +12,8 @@ function LoginPage() {
     email: "",
     pw: "",
   });
+
+  const [authErr, setAuthErr] = useState("");
 
   const handleChange = (e) => {
     setFormState({
@@ -27,47 +29,49 @@ function LoginPage() {
       handleSignupOrLogin();
       navigate("/posts");
     } catch (err) {
-      // Use a modal
-      alert("Invalid Credentials!");
+      setAuthErr(
+        "The email and password you have entered do not match our records"
+      );
     }
   };
 
   return (
     <div className="LoginPage">
-      <header className="header-footer">Log In</header>
-      <form className="form-horizontal" onSubmit={handleSubmit}>
-        <div className="form-group">
-          <div className="col-sm-12">
-            <input
-              type="email"
-              className="form-control"
-              placeholder="Email"
-              value={formState.email}
-              name="email"
-              onChange={handleChange}
-            />
-          </div>
+      <h2>Welcome back!</h2>
+      <form onSubmit={handleSubmit} className="login-form">
+        <div>
+          <input
+            type="email"
+            className="form-control"
+            placeholder="you@example.com"
+            value={formState.email}
+            name="email"
+            onChange={handleChange}
+          />
         </div>
-        <div className="form-group">
-          <div className="col-sm-12">
-            <input
-              type="password"
-              className="form-control"
-              placeholder="Password"
-              value={formState.pw}
-              name="pw"
-              onChange={handleChange}
-            />
-          </div>
+
+        <div>
+          <input
+            type="password"
+            className="form-control"
+            placeholder="password"
+            value={formState.pw}
+            name="pw"
+            onChange={handleChange}
+          />
         </div>
-        <div className="form-group">
-          <div className="col-sm-12 text-center">
-            <button className="btn btn-default">Log In</button>
-            &nbsp;&nbsp;&nbsp;
-            <Link to="/">Cancel</Link>
-          </div>
+
+        <div className="login-cancel-btns">
+          <button>Login</button>
+          <Link to="/" style={{ color: " #A9A9A9" }} className="cancel-btn">
+            Cancel
+          </Link>
         </div>
       </form>
+
+      <div className="login-err-msg">
+        {authErr.length !== 0 ? <p>{authErr}</p> : null}
+      </div>
     </div>
   );
 }

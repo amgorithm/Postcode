@@ -32,7 +32,7 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding-top: 50px;
+  padding-top: 30px;
   padding-left: 20px;
   padding-right: 20px;
   padding-bottom: 50px;
@@ -40,6 +40,15 @@
 }
 .homepage-bottom h2 {
   font-size: 30px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  padding-bottom: 10px;
+}
+
+.homepage-bottom h3 {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  padding-bottom: 20px;
 }
 
 .benefits {
@@ -47,4 +56,18 @@
   grid-template-columns: repeat(2, 1fr);
   grid-gap: 15px;
   max-width: 800px;
+}
+
+.benefits h4 {
+  color: #4d349a;
+  text-decoration-line: underline;
+  border-radius: 5px;
+  padding: 5px;
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+
+.benefits p {
+  margin-top: 5px;
+  margin-bottom: 5px;
 }

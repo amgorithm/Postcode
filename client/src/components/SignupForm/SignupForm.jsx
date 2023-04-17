@@ -2,6 +2,7 @@ import React from "react";
 import { Link, useNavigate } from "react-router-dom";
 import userService from "../../utils/userService";
 import useUser from "../../hooks/useUser";
+import "./SignupForm.css";
 
 function SignupForm({ updateMessage }) {
   const navigate = useNavigate();
@@ -42,65 +43,60 @@ function SignupForm({ updateMessage }) {
   };
 
   return (
-    <div>
-      <header className="header-footer">Sign Up</header>
-      <form className="form-horizontal" onSubmit={handleSubmit}>
-        <div className="form-group">
-          <div className="col-sm-12">
-            <input
-              type="text"
-              className="form-control"
-              placeholder="Name"
-              value={state.name}
-              name="name"
-              onChange={handleChange}
-            />
-          </div>
+    <div className="SignupForm">
+      <h2>Get started</h2>
+      <form className="signup-form" onSubmit={handleSubmit}>
+        <div>
+          <input
+            type="text"
+            className="form-control"
+            placeholder="Name"
+            value={state.name}
+            name="name"
+            onChange={handleChange}
+          />
         </div>
-        <div className="form-group">
-          <div className="col-sm-12">
-            <input
-              type="email"
-              className="form-control"
-              placeholder="Email"
-              value={state.email}
-              name="email"
-              onChange={handleChange}
-            />
-          </div>
+
+        <div>
+          <input
+            type="email"
+            className="form-control"
+            placeholder="Email"
+            value={state.email}
+            name="email"
+            onChange={handleChange}
+          />
         </div>
-        <div className="form-group">
-          <div className="col-sm-12">
-            <input
-              type="password"
-              className="form-control"
-              placeholder="Password"
-              value={state.password}
-              name="password"
-              onChange={handleChange}
-            />
-          </div>
+
+        <div>
+          <input
+            type="password"
+            className="form-control"
+            placeholder="Password"
+            value={state.password}
+            name="password"
+            onChange={handleChange}
+          />
         </div>
-        <div className="form-group">
-          <div className="col-sm-12">
-            <input
-              type="password"
-              className="form-control"
-              placeholder="Confirm Password"
-              value={state.passwordConf}
-              name="passwordConf"
-              onChange={handleChange}
-            />
-          </div>
+
+        <div>
+          <input
+            type="password"
+            className="form-control"
+            placeholder="Confirm Password"
+            value={state.passwordConf}
+            name="passwordConf"
+            onChange={handleChange}
+          />
         </div>
-        <div className="form-group">
-          <div className="col-sm-12 text-center">
-            <button className="btn btn-default" disabled={isFormInvalid()}>
-              Sign Up
-            </button>
-            &nbsp;&nbsp;
-            <Link to="/">Cancel</Link>
-          </div>
+
+        <div className="signup-cancel-btns">
+          <button className="btn btn-default" disabled={isFormInvalid()}>
+            Sign Up
+          </button>
+          <Link to="/" style={{ color: " #A9A9A9" }} className="cancel-btn">
+            Cancel
+          </Link>
         </div>
       </form>
     </div>
