@@ -26,18 +26,30 @@ function UserPosts() {
 
   return (
     <div className="userposts-container">
+      {/* user edit */}
+
       <div className="user-edit">
         <h2> {user.name} </h2>
-        <Link to={`/user/edit/${user._id}`}>
-          <img
-            src={require("../../images/edit-button.png")}
-            alt="edit"
-            className="edit"
-          />
-        </Link>
       </div>
-      <div className="about">{userDetails ? <p>{userDetails}</p> : null}</div>
-      <hr className="hr" />
+
+      <div className="about">
+        {userDetails ? (
+          <p>
+            {userDetails}{" "}
+            <Link to={`/user/edit/${user._id}`}>
+              <img
+                src={require("../../images/edit-button.png")}
+                alt="edit"
+                className="edit-img"
+              />
+            </Link>
+          </p>
+        ) : null}
+      </div>
+      <div className="hr-line">
+        <hr className="hr" />
+      </div>
+
       <div className="new-entry">
         <Link to={`/post/new/`} className="add">
           Add{" "}
@@ -49,13 +61,18 @@ function UserPosts() {
         </Link>
       </div>
 
+      {/* user posts */}
       <div className="all-posts">
         {posts && posts.length > 0 ? (
           <article>
             {posts.map((post) => (
               <div key={post._id} className="user-post">
                 <div className="title-date">
-                  <Link to={`/post/detail/${post._id}`} className="post-title">
+                  <Link
+                    to={`/post/detail/${post._id}`}
+                    className="post-title"
+                    style={{ color: "#4d349a" }}
+                  >
                     {post.title}
                   </Link>
                   <h4>{post.createdAt.split("T")[0]}</h4>
@@ -64,12 +81,16 @@ function UserPosts() {
                 <div>
                   <p>
                     {post.body.slice(0, 80)}...{" "}
-                    <Link to={`/post/detail/${post._id}`} className="body">
+                    <Link
+                      to={`/post/detail/${post._id}`}
+                      className="body"
+                      style={{ color: "#4d349a" }}
+                    >
                       Read more
                     </Link>{" "}
                   </p>
                 </div>
-                <hr className="hr" />
+                {/* <hr className="hr" /> */}
               </div>
             ))}
           </article>

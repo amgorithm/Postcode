@@ -1,40 +1,50 @@
 .userposts-container {
   padding-left: 20px;
   padding-right: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 /* User edit */
+
 .user-edit {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding-top: 20px;
+  padding-top: 35px;
   padding-bottom: 20px;
 }
 
-.edit {
-  height: 20px;
+.edit-img {
+  height: 15px;
+}
+
+.user-edit a {
+  margin-left: auto;
 }
 
 .user-edit h2 {
   font-size: 18px;
+  margin: 0px;
 }
 
-hr {
+.about {
+  max-width: 700px;
+  text-align: center;
+}
+
+.hr-line {
   margin-top: 20px;
   margin-bottom: 20px;
+  width: 100%;
 }
 
 .hr {
+  max-width: 700px;
   border: 1px solid #e0e0e0;
-  border-radius: 5px;
 }
 
 /* Posts */
 .new-entry {
-  display: flex;
-  justify-content: center;
-  align-items: center;
   padding-bottom: 20px;
 }
 
@@ -50,6 +60,18 @@ hr {
   padding-top: 3px;
 }
 
+.all-posts {
+  padding-bottom: 50px;
+}
+
+.user-post {
+  border: 1px solid #45415a;
+  border-radius: 20px;
+  max-width: 700px;
+  padding: 12px;
+  margin: 15px 0px;
+}
+
 .title-date {
   display: flex;
   justify-content: space-between;
@@ -58,6 +80,9 @@ hr {
 .title-date h4 {
   font-size: 16px;
   font-weight: normal;
+  margin: 0px;
+  padding-left: 10px;
+  color: rgb(202, 202, 202);
 }
 
 .post-title {

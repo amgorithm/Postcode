@@ -11,8 +11,6 @@ import AddPost from "../AddPost/AddPost";
 import EditPost from "../EditPost/EditPost";
 import DetailPost from "../DetailPost/DetailPost";
 import EditUserAbout from "../EditUserAbout/EditUserAbout";
-import Footer from "../../components/Footer/Footer";
-import About from "../About/About";
 
 function App() {
   const { refreshAuth } = useUser();
@@ -38,12 +36,8 @@ function App() {
           <Route exact path="/post/detail/:postID" element={<DetailPost />} />
           <Route exact path="/post/edit/:postID" element={<EditPost />} />
           <Route exact path="/user/edit/:userID" element={<EditUserAbout />} />
-          <Route exact path="/about" element={<About />} />
         </Routes>
       </main>
-      <footer>
-        <Footer />
-      </footer>
     </div>
   );
 }
