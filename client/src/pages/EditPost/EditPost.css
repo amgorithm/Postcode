@@ -1,0 +1,79 @@
+.EditPost {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.EditPost textarea,
+.EditPost label,
+.EditPost button,
+.cancel-btn {
+  font-family: "Montserrat", sans-serif;
+}
+
+.EditPost h2 {
+  font-size: 30px;
+  margin-top: 10px;
+  margin-bottom: 20px;
+  font-family: "Barlow Condensed", sans-serif;
+}
+
+.edit-form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.EditPost label {
+  font-size: 18px;
+  margin-top: 10px;
+}
+
+.EditPost textarea {
+  margin: 8px 0;
+  padding: 7px;
+  border: 1px solid #332f50;
+  border-radius: 3px;
+}
+
+.edit-title,
+.edit-body {
+  margin-bottom: 10px;
+}
+
+.edit-title-txt {
+  word-wrap: break-word;
+  width: 250px;
+  max-width: 250px;
+  height: 70px;
+  max-height: 70px;
+}
+
+.edit-body-txt {
+  width: 250px;
+  max-width: 250px;
+  height: 380px;
+  max-height: 480px;
+}
+
+.edit-cancel-btns {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.edit-cancel-btns button {
+  padding: 6px;
+  border: 1px solid #332f50;
+  border-radius: 3px;
+  font-size: 16px;
+  font-weight: bold;
+  width: 250px;
+  max-width: 250px;
+  margin-bottom: 10px;
+  color: white;
+  background-color: #332f50;
+}

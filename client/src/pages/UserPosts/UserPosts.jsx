@@ -26,8 +26,6 @@ function UserPosts() {
 
   return (
     <div className="userposts-container">
-      {/* user edit */}
-
       <div className="user-edit">
         <h2> {user.name} </h2>
       </div>
@@ -44,7 +42,18 @@ function UserPosts() {
               />
             </Link>
           </p>
-        ) : null}
+        ) : (
+          <p className="add-about">
+            Add about{" "}
+            <Link to={`/user/edit/${user._id}`}>
+              <img
+                src={require("../../images/diagonal-arrow.png")}
+                alt="edit"
+                className="add-about-img"
+              />
+            </Link>
+          </p>
+        )}
       </div>
       <div className="hr-line">
         <hr className="hr" />
@@ -61,7 +70,6 @@ function UserPosts() {
         </Link>
       </div>
 
-      {/* user posts */}
       <div className="all-posts">
         {posts && posts.length > 0 ? (
           <article>
@@ -95,7 +103,9 @@ function UserPosts() {
             ))}
           </article>
         ) : (
-          <p>There doesn't seem to be any posts here yet.</p>
+          <p className="no-posts">
+            There doesn't seem to be any posts here yet.
+          </p>
         )}
       </div>
     </div>

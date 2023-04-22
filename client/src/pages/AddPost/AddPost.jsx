@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, Link } from "react-router-dom";
 import { newPost } from "../../utils/postService";
 import "./AddPost.css";
 
@@ -30,29 +30,49 @@ function AddPost() {
   }
 
   return (
-    <div>
-      <div>
-        <form className="addPost" onSubmit={handleSubmit}>
-          <label>Title:</label>
-          <input
+    <div className="addPost">
+      <h2>Add new post</h2>
+      <form className="add-form" onSubmit={handleSubmit}>
+        <div className="add-title">
+          <div>
+            <label>Title:</label>
+          </div>
+
+          <textarea
             name="title"
             value={createdPost.title}
             onChange={handleChange}
-            className="title"
+            className="add-title-txt"
             maxLength={60}
+            wrap="soft"
           />
-          <label>Body:</label>
+        </div>
+
+        <div className="add-body">
+          <div>
+            <label>Body:</label>
+          </div>
+
           <textarea
             name="body"
             value={createdPost.body}
             onChange={handleChange}
-            className="body"
+            className="add-body-txt"
             maxLength={650}
+            wrap="soft"
           />
-
-          <button disabled={isFormInvalid()}>Add</button>
-        </form>
-      </div>
+        </div>
+        <div className="add-cancel-btns">
+          <button disabled={isFormInvalid()}>Post</button>
+          <Link
+            to="/posts"
+            style={{ color: " #A9A9A9" }}
+            className="cancel-btn"
+          >
+            Cancel
+          </Link>
+        </div>
+      </form>
     </div>
   );
 }

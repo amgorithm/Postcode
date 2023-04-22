@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
-import { useNavigate, useParams } from "react-router-dom";
+import { useNavigate, useParams, Link } from "react-router-dom";
 import { getPost, updatePost } from "../../utils/postService";
+import "./EditPost.css";
 
 function EditPost() {
   const { postID } = useParams();
@@ -40,25 +41,47 @@ function EditPost() {
   }
 
   return (
-    <div>
-      <form onSubmit={handleUpdate}>
-        <label>Title:</label>
-        <input
-          name="title"
-          value={post.title}
-          onChange={handleChange}
-          className="title"
-          maxLength={60}
-        />
-        <label>Body:</label>
-        <textarea
-          name="body"
-          value={post.body}
-          onChange={handleChange}
-          className="body"
-          maxLength={650}
-        />
-        <button disabled={isFormInvalid()}>Add</button>
+    <div className="EditPost">
+      <h2>Edit post</h2>
+      <form className="edit-form" onSubmit={handleUpdate}>
+        <div className="edit-title">
+          <div>
+            <label>Title:</label>
+          </div>
+
+          <textarea
+            name="title"
+            value={post.title}
+            onChange={handleChange}
+            className="edit-title-txt"
+            maxLength={60}
+            wrap="soft"
+          />
+        </div>
+        <div className="edit-body">
+          <div>
+            <label>Body:</label>
+          </div>
+
+          <textarea
+            name="body"
+            value={post.body}
+            onChange={handleChange}
+            className="edit-body-txt"
+            maxLength={650}
+            wrap="soft"
+          />
+        </div>
+        <div className="edit-cancel-btns">
+          <button disabled={isFormInvalid()}>Update</button>
+          <Link
+            to="/posts"
+            style={{ color: " #A9A9A9" }}
+            className="cancel-btn"
+          >
+            Cancel
+          </Link>
+        </div>
       </form>
     </div>
   );

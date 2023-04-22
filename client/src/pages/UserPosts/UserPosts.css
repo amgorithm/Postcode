@@ -7,11 +7,21 @@
   align-items: center;
 }
 
+.userposts-container h2,
+.add {
+  font-family: "Barlow Condensed", sans-serif;
+}
+
+.post-title,
+.userposts-container h4,
+.userposts-container p {
+  font-family: "Montserrat", sans-serif;
+}
+
 /* User edit */
 
 .user-edit {
-  padding-top: 35px;
-  padding-bottom: 20px;
+  margin-top: 35px;
 }
 
 .edit-img {
@@ -23,13 +33,29 @@
 }
 
 .user-edit h2 {
-  font-size: 18px;
+  font-size: 25px;
   margin: 0px;
 }
 
 .about {
   max-width: 700px;
   text-align: center;
+  margin: 0px;
+}
+
+.about p {
+  margin: 10px;
+}
+
+.add-about {
+  font-style: italic;
+  color: #cecece;
+  padding: 3px;
+  /* margin: 0px; */
+}
+
+.add-about-img {
+  height: 13px;
 }
 
 .hr-line {
@@ -49,6 +75,7 @@
 }
 
 .add {
+  font-size: 20px;
   text-transform: uppercase;
 }
 
@@ -75,10 +102,11 @@
 .title-date {
   display: flex;
   justify-content: space-between;
+  align-items: flex-start;
 }
 
 .title-date h4 {
-  font-size: 16px;
+  font-size: 15px;
   font-weight: normal;
   margin: 0px;
   padding-left: 10px;
@@ -86,5 +114,12 @@
 }
 
 .post-title {
+  font-size: 18px;
   padding-bottom: 10px;
+  font-weight: bold;
+}
+
+.no-posts {
+  text-align: center;
+  margin: 10px;
 }

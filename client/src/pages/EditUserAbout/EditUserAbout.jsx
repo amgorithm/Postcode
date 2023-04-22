@@ -1,8 +1,9 @@
 import React, { useState, useEffect } from "react";
-import { useNavigate, useParams } from "react-router-dom";
+import { useNavigate, useParams, Link } from "react-router-dom";
 import { updateAbout } from "../../utils/userService";
 import { getPosts } from "../../utils/postService";
 import useUser from "../../hooks/useUser";
+import "./EditUserAbout.css";
 
 function EditUserAbout() {
   const { user } = useUser();
@@ -50,17 +51,34 @@ function EditUserAbout() {
   };
 
   return (
-    <div>
-      <form onSubmit={handleUpdate}>
-        <label>About:</label>
-        <textarea
-          name="about"
-          value={userAbout.about}
-          onChange={handleChange}
-          className="body"
-          maxLength={150}
-        />
-        <button>Add</button>
+    <div className="EditUserAbout">
+      <h2>Update your about</h2>
+      <form className="about-form" onSubmit={handleUpdate}>
+        <div className="modify-about">
+          <div>
+            <label>About:</label>
+          </div>
+
+          <textarea
+            name="about"
+            value={userAbout.about}
+            onChange={handleChange}
+            className="modify-about-txt"
+            maxLength={150}
+            wrap="soft"
+          />
+        </div>
+        <div className="about-cancel-btns">
+          <button>Update</button>
+
+          <Link
+            to="/posts"
+            style={{ color: " #A9A9A9" }}
+            className="cancel-btn"
+          >
+            Cancel
+          </Link>
+        </div>
       </form>
     </div>
   );

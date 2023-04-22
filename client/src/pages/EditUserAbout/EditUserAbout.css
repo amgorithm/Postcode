@@ -1,0 +1,70 @@
+.EditUserAbout {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.EditUserAbout textarea,
+.EditUserAbout label,
+.EditUserAbout button,
+.cancel-btn {
+  font-family: "Montserrat", sans-serif;
+}
+
+.EditUserAbout h2 {
+  font-size: 30px;
+  margin-top: 10px;
+  margin-bottom: 20px;
+  font-family: "Barlow Condensed", sans-serif;
+}
+
+.about-form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.EditUserAbout label {
+  font-size: 18px;
+  margin-top: 10px;
+}
+
+.EditUserAbout textarea {
+  margin: 8px 0;
+  padding: 7px;
+  border: 1px solid #332f50;
+  border-radius: 3px;
+}
+
+.modify-about {
+  margin-bottom: 10px;
+}
+
+.modify-about-txt {
+  word-wrap: break-word;
+  width: 250px;
+  max-width: 250px;
+  height: 100px;
+  max-height: 100px;
+}
+
+.about-cancel-btns {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.about-cancel-btns button {
+  padding: 6px;
+  border: 1px solid #332f50;
+  border-radius: 3px;
+  font-size: 16px;
+  font-weight: bold;
+  width: 250px;
+  max-width: 250px;
+  margin-bottom: 10px;
+  color: white;
+  background-color: #332f50;
+}

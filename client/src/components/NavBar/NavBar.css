@@ -7,6 +7,21 @@
   background-color: #332f50;
 }
 
+.postcode h1 {
+  font-family: "Barlow Condensed", sans-serif;
+  font-size: 30px;
+  padding-right: 15px;
+  margin: 10px 0px;
+}
+
+.Nav-links {
+  font-family: "Montserrat", sans-serif;
+}
+
+.Nav-links a {
+  font-size: 17px;
+}
+
 .NavBar a {
   text-decoration: none;
   text-transform: uppercase;
@@ -19,9 +34,4 @@
 
 .right {
   padding-left: 5px;
-}
-
-.postcode h1 {
-  font-size: 23px;
-  padding-right: 15px;
 }

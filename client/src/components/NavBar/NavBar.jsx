@@ -32,7 +32,7 @@ const NavBar = () => {
       <NavLink to="/" className="postcode">
         <h1>Postcode</h1>
       </NavLink>
-      <div>{nav}</div>
+      <div className="Nav-links">{nav}</div>
     </div>
   );
 };
