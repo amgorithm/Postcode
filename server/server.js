@@ -26,7 +26,8 @@ app.use(express.json());
 app.use(
   cors({
     origin: [
-      "https://wide-eyed-boa-stockings.cyclic.app/",
+      "https://wide-eyed-boa-stockings.cyclic.app",
+      "https://postcode-app.netlify.app",
       "http://localhost:3000",
     ],
   })
