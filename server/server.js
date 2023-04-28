@@ -11,7 +11,7 @@ import userRoutes from "./routes/api/users.js";
 import postRoutes from "./routes/api/posts.js";
 import auth from "./config/auth.js";
 
-import { connectToDb } from "./config/database.js";
+import connectToDb from "./config/database.js";
 import errorHandling from "./middleware/errorHandling.js";
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
@@ -34,7 +34,6 @@ app.use(
 );
 
 app.use(function (req, res, next) {
-  // set Access-Control-Allow-Origin header
   const allowedOrigins = [
     "https://wide-eyed-boa-stockings.cyclic.app",
     "https://postcode-app.netlify.app",
