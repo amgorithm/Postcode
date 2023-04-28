@@ -3,7 +3,7 @@ import tokenService from "./tokenService";
 import { BASE_URL } from "./constants.js";
 
 function signup(user) {
-  return fetch(BASE_URL + "signup", {
+  return fetch(BASE_URL + "/api/v1/signup", {
     method: "POST",
     headers: new Headers({ "Content-Type": "application/json" }),
     body: JSON.stringify(user),
@@ -28,7 +28,7 @@ function logout() {
 }
 
 function login(creds) {
-  return fetch(BASE_URL + "login", {
+  return fetch(BASE_URL + "/api/v1/users/login", {
     method: "POST",
     headers: new Headers({ "Content-Type": "application/json" }),
     body: JSON.stringify(creds),
