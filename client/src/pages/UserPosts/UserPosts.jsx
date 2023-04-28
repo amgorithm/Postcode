@@ -74,34 +74,36 @@ function UserPosts() {
       <div className="all-posts">
         {posts && posts.length > 0 ? (
           <article>
-            {posts.map((post) => (
-              <div key={post._id} className="user-post">
-                <div className="title-date">
-                  <Link
-                    to={`/post/detail/${post._id}`}
-                    className="post-title"
-                    style={{ color: "#4d349a" }}
-                  >
-                    {post.title}
-                  </Link>
-                  <h4>{post.createdAt.split("T")[0]}</h4>
-                </div>
-
-                <div>
-                  <p>
-                    {post.body.slice(0, 80)}...{" "}
+            {posts
+              .sort((a, b) => new Date(b.createdAt) - new Date(a.createdAt))
+              .map((post) => (
+                <div key={post._id} className="user-post">
+                  <div className="title-date">
                     <Link
                       to={`/post/detail/${post._id}`}
-                      className="body"
+                      className="post-title"
                       style={{ color: "#4d349a" }}
                     >
-                      Read more
-                    </Link>{" "}
-                  </p>
+                      {post.title}
+                    </Link>
+                    <h4>{post.createdAt.split("T")[0]}</h4>
+                  </div>
+
+                  <div>
+                    <p>
+                      {post.body.slice(0, 80)}...{" "}
+                      <Link
+                        to={`/post/detail/${post._id}`}
+                        className="body"
+                        style={{ color: "#4d349a" }}
+                      >
+                        Read more
+                      </Link>{" "}
+                    </p>
+                  </div>
+                  {/* <hr className="hr" /> */}
                 </div>
-                {/* <hr className="hr" /> */}
-              </div>
-            ))}
+              ))}
           </article>
         ) : (
           <p className="no-posts">
