@@ -11,7 +11,7 @@ import userRoutes from "./routes/api/users.js";
 import postRoutes from "./routes/api/posts.js";
 import auth from "./config/auth.js";
 
-import connectToDb from "./config/database.js";
+import { connectToDb } from "./config/database.js";
 import errorHandling from "./middleware/errorHandling.js";
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
@@ -25,30 +25,9 @@ app.use(express.json());
 
 app.use(
   cors({
-    origin: [
-      "https://wide-eyed-boa-stockings.cyclic.app",
-      "https://postcode-app.netlify.app",
-      "http://localhost:3000",
-    ],
+    origin: ["https://postcode-app.netlify.app", "http://localhost:3000"],
   })
 );
-
-app.use(function (req, res, next) {
-  const allowedOrigins = [
-    "https://wide-eyed-boa-stockings.cyclic.app",
-    "https://postcode-app.netlify.app",
-    "http://localhost:3000",
-  ];
-  const origin = req.headers.origin;
-  if (allowedOrigins.includes(origin)) {
-    res.setHeader("Access-Control-Allow-Origin", origin);
-  }
-  res.header(
-    "Access-Control-Allow-Headers",
-    "Origin, X-Requested-With, Content-Type, Accept"
-  );
-  next();
-});
 
 app.use(auth);
 
