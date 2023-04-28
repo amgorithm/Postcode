@@ -64,7 +64,7 @@ function DetailPost() {
           </div>
         </article>
       ) : (
-        <p>There doesn't seem to be any posts here yet.</p>
+        <p>Loading, please wait.</p>
       )}
     </div>
   );

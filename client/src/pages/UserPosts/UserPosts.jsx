@@ -61,7 +61,7 @@ function UserPosts() {
       </div>
 
       <div className="new-entry">
-        <Link to={`/post/new/`} className="add">
+        <Link to={`/post/new/`} className="add" style={{ color: "#4d349a" }}>
           Add{" "}
           <img
             src={require("../../images/plus.png")}
