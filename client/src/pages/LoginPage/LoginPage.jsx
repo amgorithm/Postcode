@@ -63,7 +63,7 @@ function LoginPage() {
 
         <div className="login-cancel-btns">
           <button>Login</button>
-          <Link to="/" style={{ color: " #A9A9A9" }} className="cancel-btn">
+          <Link to="/" style={{ color: " #A3A3A3" }} className="cancel-btn">
             Cancel
           </Link>
         </div>

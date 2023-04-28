@@ -72,10 +72,61 @@
 
 /* Media queries */
 @media only screen and (min-width: 768px) {
+  .EditUserAbout h2 {
+    font-size: 35px;
+  }
+  .EditUserAbout label {
+    font-size: 19px;
+  }
+
+  .modify-about-txt {
+    width: 350px;
+    max-width: 350px;
+    height: 90px;
+    max-height: 90px;
+  }
+
+  .about-cancel-btns button {
+    font-size: 17px;
+  }
 }
 
 @media only screen and (min-width: 992px) {
+  .EditUserAbout h2 {
+    font-size: 35px;
+  }
+  .EditUserAbout label {
+    font-size: 20px;
+  }
+
+  .modify-about-txt {
+    width: 350px;
+    max-width: 350px;
+    height: 90px;
+    max-height: 90px;
+  }
+
+  .about-cancel-btns button {
+    font-size: 18px;
+  }
 }
 
 @media only screen and (min-width: 1200px) {
+  .EditUserAbout h2 {
+    font-size: 35px;
+  }
+  .EditUserAbout label {
+    font-size: 20px;
+  }
+
+  .modify-about-txt {
+    width: 350px;
+    max-width: 350px;
+    height: 90px;
+    max-height: 90px;
+  }
+
+  .about-cancel-btns button {
+    font-size: 18px;
+  }
 }

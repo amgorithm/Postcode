@@ -26,7 +26,6 @@
 
 .title {
   font-size: 20px;
-  margin: 20px 0px;
   color: #4d349a;
 }
 
@@ -45,7 +44,7 @@
 
 .date-modify {
   height: 25px;
-  color: rgb(202, 202, 202);
+  color: rgb(163, 163, 163);
 }
 
 .edit {
@@ -77,10 +76,66 @@
 
 /* Media queries */
 @media only screen and (min-width: 768px) {
+  .title {
+    font-size: 22px;
+  }
+  .edit {
+    height: 22px;
+  }
+  .trash {
+    height: 21px;
+  }
+  .date {
+    font-size: 17px;
+  }
+
+  .post-container p {
+    font-size: 17px;
+  }
 }
 
 @media only screen and (min-width: 992px) {
+  .title {
+    font-size: 25px;
+  }
+  .edit {
+    height: 22px;
+  }
+  .trash {
+    height: 21px;
+  }
+  .date {
+    font-size: 18px;
+  }
+
+  .post-container p {
+    font-size: 18px;
+  }
+
+  .post-body {
+    max-width: 800px;
+  }
 }
 
 @media only screen and (min-width: 1200px) {
+  .title {
+    font-size: 25px;
+  }
+  .edit {
+    height: 22px;
+  }
+  .trash {
+    height: 21px;
+  }
+  .date {
+    font-size: 18px;
+  }
+
+  .post-container p {
+    font-size: 18px;
+  }
+
+  .post-body {
+    max-width: 800px;
+  }
 }

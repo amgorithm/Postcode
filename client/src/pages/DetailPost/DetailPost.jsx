@@ -30,8 +30,6 @@ function DetailPost() {
     navigate("/");
   }
 
-  console.log(post);
-
   return (
     <div className="post-container">
       {post.length !== 0 ? (

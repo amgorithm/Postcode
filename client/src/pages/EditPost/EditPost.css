@@ -80,10 +80,79 @@
 
 /* Media queries */
 @media only screen and (min-width: 768px) {
+  .EditPost h2 {
+    font-size: 35px;
+  }
+  .EditPost label {
+    font-size: 19px;
+  }
+  .edit-title-txt {
+    width: 530px;
+    max-width: 530px;
+    height: 40px;
+    max-height: 40px;
+  }
+
+  .edit-body-txt {
+    width: 530px;
+    max-width: 530px;
+    height: 270px;
+    max-height: 270px;
+  }
+
+  .edit-cancel-btns button {
+    font-size: 17px;
+  }
 }
 
 @media only screen and (min-width: 992px) {
+  .EditPost h2 {
+    font-size: 35px;
+  }
+  .EditPost label {
+    font-size: 20px;
+  }
+  .edit-title-txt {
+    width: 530px;
+    max-width: 530px;
+    height: 40px;
+    max-height: 40px;
+  }
+
+  .edit-body-txt {
+    width: 530px;
+    max-width: 530px;
+    height: 270px;
+    max-height: 270px;
+  }
+
+  .edit-cancel-btns button {
+    font-size: 18px;
+  }
 }
 
 @media only screen and (min-width: 1200px) {
+  .EditPost h2 {
+    font-size: 35px;
+  }
+  .EditPost label {
+    font-size: 20px;
+  }
+  .edit-title-txt {
+    width: 530px;
+    max-width: 530px;
+    height: 40px;
+    max-height: 40px;
+  }
+
+  .edit-body-txt {
+    width: 530px;
+    max-width: 530px;
+    height: 270px;
+    max-height: 270px;
+  }
+
+  .edit-cancel-btns button {
+    font-size: 18px;
+  }
 }

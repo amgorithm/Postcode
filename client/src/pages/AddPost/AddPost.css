@@ -80,10 +80,85 @@
 
 /* Media queries */
 @media only screen and (min-width: 768px) {
+  .addPost h2 {
+    font-size: 35px;
+  }
+
+  .addPost label {
+    font-size: 19px;
+  }
+
+  .add-title-txt {
+    width: 530px;
+    max-width: 530px;
+    height: 40px;
+    max-height: 40px;
+  }
+
+  .add-body-txt {
+    width: 530px;
+    max-width: 530px;
+    height: 270px;
+    max-height: 270px;
+  }
+
+  .add-cancel-btns button {
+    font-size: 17px;
+  }
 }
 
 @media only screen and (min-width: 992px) {
+  .addPost h2 {
+    font-size: 35px;
+  }
+
+  .addPost label {
+    font-size: 20px;
+  }
+
+  .add-title-txt {
+    width: 530px;
+    max-width: 530px;
+    height: 40px;
+    max-height: 40px;
+  }
+
+  .add-body-txt {
+    width: 530px;
+    max-width: 530px;
+    height: 270px;
+    max-height: 270px;
+  }
+
+  .add-cancel-btns button {
+    font-size: 18px;
+  }
 }
 
 @media only screen and (min-width: 1200px) {
+  .addPost h2 {
+    font-size: 35px;
+  }
+
+  .addPost label {
+    font-size: 20px;
+  }
+
+  .add-title-txt {
+    width: 530px;
+    max-width: 530px;
+    height: 40px;
+    max-height: 40px;
+  }
+
+  .add-body-txt {
+    width: 530px;
+    max-width: 530px;
+    height: 270px;
+    max-height: 270px;
+  }
+
+  .add-cancel-btns button {
+    font-size: 18px;
+  }
 }
