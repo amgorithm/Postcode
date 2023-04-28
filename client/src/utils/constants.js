@@ -1,1 +1,1 @@
-export const BASE_URL = "https://wide-eyed-boa-stockings.cyclic.app";
+export const BASE_URL = "https://postcode-server.onrender.com";
