@@ -47,6 +47,14 @@ app.get("/*", function (req, res) {
   res.sendFile(path.join(__dirname, "..", "client", "build", "index.html"));
 });
 
+app.use((req, res, next) => {
+  res.header(
+    "Access-Control-Allow-Origin",
+    "https://wide-eyed-boa-stockings.cyclic.app, https://postcode-app.netlify.app, http://localhost:3000"
+  );
+  next();
+});
+
 app.use(errorHandling);
 const port = process.env.PORT || 3001;
 
