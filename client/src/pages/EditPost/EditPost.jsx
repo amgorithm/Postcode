@@ -20,6 +20,7 @@ function EditPost() {
       }
     }
     viewPost();
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [postID]);
 
   function handleChange(e) {

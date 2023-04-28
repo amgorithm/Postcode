@@ -32,6 +32,7 @@ function EditUserAbout() {
     }
 
     editAbout();
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [userID]);
 
   function handleChange(e) {

@@ -1,6 +1,6 @@
 import tokenService from "./tokenService";
 
-const BASE_URL = "/api/v1/users/"; // Note: Once deployed this should be updated.
+import { BASE_URL } from "./constants.js";
 
 function signup(user) {
   return fetch(BASE_URL + "signup", {
@@ -43,7 +43,7 @@ function login(creds) {
 export const updateAbout = async (userAbout, userID) => {
   try {
     const token = tokenService.getToken();
-    let response = await fetch(`/api/v1/users/${userID}`, {
+    let response = await fetch(`${BASE_URL}/api/v1/users/${userID}`, {
       method: "PATCH",
       headers: {
         "content-type": "application/json",

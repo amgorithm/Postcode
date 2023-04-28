@@ -28,7 +28,7 @@ function SignupForm({ updateMessage }) {
     try {
       await userService.signup(state);
       handleSignupOrLogin();
-      navigate("/");
+      navigate("/posts");
     } catch (err) {
       updateMessage(err.message);
     }

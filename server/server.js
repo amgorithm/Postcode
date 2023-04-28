@@ -22,7 +22,16 @@ const app = express();
 
 app.use(logger("dev"));
 app.use(express.json());
-app.use(cors());
+
+app.use(
+  cors({
+    origin: [
+      "https://wide-eyed-boa-stockings.cyclic.app/",
+      "http://localhost:3000",
+    ],
+  })
+);
+
 app.use(auth);
 
 // Proxy

@@ -1,10 +1,10 @@
 import tokenService from "./tokenService.js";
-// const BASE_URL = "/api/v1/posts/";
+import { BASE_URL } from "./constants.js";
 
 export const newPost = async (post) => {
   try {
     const token = tokenService.getToken();
-    let response = await fetch(`/api/v1/posts`, {
+    let response = await fetch(`${BASE_URL}/api/v1/posts`, {
       method: "POST",
       headers: {
         "content-type": "application/json",
@@ -32,7 +32,7 @@ export const newPost = async (post) => {
 export const getPosts = async (userID) => {
   try {
     const token = tokenService.getToken();
-    let response = await fetch(`/api/v1/users/${userID}`, {
+    let response = await fetch(`${BASE_URL}/api/v1/users/${userID}`, {
       method: "GET",
       headers: {
         Authorization: "Bearer " + token,
@@ -48,7 +48,7 @@ export const getPosts = async (userID) => {
 export const getPost = async (postID) => {
   try {
     const token = tokenService.getToken();
-    let response = await fetch(`/api/v1/posts/${postID}`, {
+    let response = await fetch(`${BASE_URL}/api/v1/posts/${postID}`, {
       method: "GET",
       headers: {
         Authorization: "Bearer " + token,
@@ -64,7 +64,7 @@ export const getPost = async (postID) => {
 export const updatePost = async (post, postID) => {
   try {
     const token = tokenService.getToken();
-    let response = await fetch(`/api/v1/posts/${postID}`, {
+    let response = await fetch(`${BASE_URL}/api/v1/posts/${postID}`, {
       method: "PATCH",
       headers: {
         "content-type": "application/json",
@@ -82,7 +82,7 @@ export const updatePost = async (post, postID) => {
 export const removeBlog = async (userID) => {
   try {
     const token = tokenService.getToken();
-    let response = await fetch(`/api/v1/posts/${userID}`, {
+    let response = await fetch(`${BASE_URL}/api/v1/posts/${userID}`, {
       method: "DELETE",
       headers: {
         Authorization: "Bearer " + token,
