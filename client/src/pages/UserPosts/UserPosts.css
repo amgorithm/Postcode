@@ -50,7 +50,7 @@
 
 .add-about {
   font-style: italic;
-  color: #cecece;
+  color: rgb(163, 163, 163);
   padding: 3px;
   /* margin: 0px; */
 }
@@ -131,7 +131,9 @@
     font-size: 30px;
   }
 
-  .about p {
+  .about p,
+  .add-about,
+  .no-posts {
     font-size: 17px;
   }
 
@@ -161,7 +163,9 @@
     font-size: 35px;
   }
 
-  .about p {
+  .about p,
+  .add-about,
+  .no-posts {
     font-size: 18px;
   }
 
@@ -195,7 +199,9 @@
     font-size: 35px;
   }
 
-  .about p {
+  .about p,
+  .add-about,
+  .no-posts {
     font-size: 18px;
   }
 
