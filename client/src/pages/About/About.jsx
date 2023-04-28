@@ -4,7 +4,7 @@ import "./About.css";
 function About() {
   return (
     <div className="About">
-      <h2>About</h2>
+      <h2>About Postcode</h2>
 
       <p>
         Postcode is designed for programmers who want to share their daily

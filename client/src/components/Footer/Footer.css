@@ -1,5 +1,5 @@
 .footer {
-  background-color: lightgray;
+  background-color: rgba(51, 47, 80, 0.2);
   padding: 20px;
   text-align: center;
   display: flex;
@@ -18,5 +18,5 @@
 }
 
 .footer a {
-  color: black;
+  color: #332f50;
 }
