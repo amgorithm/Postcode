@@ -25,7 +25,7 @@ function HomePage() {
         </h3>
         <div className="benefits">
           <div>
-            <h4>Problem-solving</h4>
+            <h4>Problem-solve</h4>
             <p>
               Strengthen your problem-solving skills by writing about the steps
               taken to tackle challenges{" "}

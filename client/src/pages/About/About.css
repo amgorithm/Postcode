@@ -1,0 +1,21 @@
+.About {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding-left: 20px;
+  padding-right: 20px;
+  margin-top: 20px;
+  margin-bottom: 80px;
+}
+
+.About h2 {
+  font-family: "Barlow Condensed", sans-serif;
+  font-size: 35px;
+}
+
+.About p {
+  font-family: "Montserrat", sans-serif;
+  font-size: 18px;
+}

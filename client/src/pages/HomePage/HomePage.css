@@ -9,10 +9,7 @@
   justify-content: center;
   align-items: center;
   background-color: #332f50;
-  padding-top: 50px;
-  padding-left: 20px;
-  padding-right: 20px;
-  padding-bottom: 50px;
+  padding: 50px 20px;
 }
 
 .typing {
@@ -21,7 +18,7 @@
 
 .homepage-top h2 {
   color: white;
-  font-size: 35px;
+  font-size: 40px;
   margin: 10px 0px;
 }
 
@@ -74,7 +71,7 @@
 }
 
 .benefits h4 {
-  font-size: 20px;
+  font-size: 23px;
   color: #4d349a;
   text-decoration-line: underline;
   border-radius: 5px;
