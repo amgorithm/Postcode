@@ -33,6 +33,24 @@ app.use(
   })
 );
 
+app.use(function (req, res, next) {
+  // set Access-Control-Allow-Origin header
+  const allowedOrigins = [
+    "https://wide-eyed-boa-stockings.cyclic.app",
+    "https://postcode-app.netlify.app",
+    "http://localhost:3000",
+  ];
+  const origin = req.headers.origin;
+  if (allowedOrigins.includes(origin)) {
+    res.setHeader("Access-Control-Allow-Origin", origin);
+  }
+  res.header(
+    "Access-Control-Allow-Headers",
+    "Origin, X-Requested-With, Content-Type, Accept"
+  );
+  next();
+});
+
 app.use(auth);
 
 // Proxy
@@ -45,14 +63,6 @@ app.use("/api/v1/posts", postRoutes);
 
 app.get("/*", function (req, res) {
   res.sendFile(path.join(__dirname, "..", "client", "build", "index.html"));
-});
-
-app.use((req, res, next) => {
-  res.header(
-    "Access-Control-Allow-Origin",
-    "https://wide-eyed-boa-stockings.cyclic.app, https://postcode-app.netlify.app, http://localhost:3000"
-  );
-  next();
 });
 
 app.use(errorHandling);
