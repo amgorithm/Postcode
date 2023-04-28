@@ -4,3 +4,13 @@
   color: #332f50;
   font-family: "Montserrat", sans-serif;
 }
+
+/* Media queries */
+@media only screen and (min-width: 768px) {
+}
+
+@media only screen and (min-width: 992px) {
+}
+
+@media only screen and (min-width: 1200px) {
+}

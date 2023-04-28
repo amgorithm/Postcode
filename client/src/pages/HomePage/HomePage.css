@@ -84,3 +84,77 @@
   margin-top: 5px;
   margin-bottom: 5px;
 }
+
+/* Media queries */
+@media only screen and (min-width: 768px) {
+  .homepage-top h2 {
+    font-size: 42px;
+  }
+  .homepage-bottom h2 {
+    font-size: 38px;
+  }
+
+  .benefits h4 {
+    font-size: 24px;
+  }
+
+  .benefits p {
+    font-size: 18px;
+  }
+
+  .benefits {
+    max-width: 700px;
+  }
+}
+
+@media only screen and (min-width: 992px) {
+  .homepage-top h2 {
+    font-size: 45px;
+  }
+  .homepage-bottom h2 {
+    font-size: 40px;
+  }
+
+  .benefits h4 {
+    font-size: 25px;
+  }
+
+  .benefits p {
+    font-size: 18px;
+  }
+
+  .benefits {
+    max-width: 900px;
+  }
+
+  .homepage h3,
+  .homepage h4 {
+    max-width: 900px;
+  }
+}
+
+@media only screen and (min-width: 1200px) {
+  .homepage-top h2 {
+    font-size: 45px;
+  }
+  .homepage-bottom h2 {
+    font-size: 40px;
+  }
+
+  .benefits h4 {
+    font-size: 25px;
+  }
+
+  .benefits p {
+    font-size: 18px;
+  }
+
+  .benefits {
+    max-width: 900px;
+  }
+
+  .homepage h3,
+  .homepage h4 {
+    max-width: 900px;
+  }
+}

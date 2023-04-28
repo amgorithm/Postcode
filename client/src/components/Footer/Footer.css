@@ -20,3 +20,22 @@
 .footer a {
   color: #332f50;
 }
+
+/* Media queries */
+@media only screen and (min-width: 768px) {
+  .footer h2 {
+    font-size: 18pt;
+  }
+}
+
+@media only screen and (min-width: 992px) {
+  .footer h2 {
+    font-size: 20pt;
+  }
+}
+
+@media only screen and (min-width: 1200px) {
+  .footer h2 {
+    font-size: 20pt;
+  }
+}

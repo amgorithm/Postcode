@@ -62,3 +62,61 @@
   padding: 0 35px;
   color: #332f50;
 }
+
+/* Media queries */
+@media only screen and (min-width: 768px) {
+  .LoginPage h2 {
+    font-size: 32px;
+  }
+
+  .login-form input {
+    font-size: 15px;
+  }
+
+  .login-form button {
+    font-size: 17px;
+    width: 225px;
+  }
+
+  .cancel-btn {
+    font-size: 16px;
+  }
+}
+
+@media only screen and (min-width: 992px) {
+  .LoginPage h2 {
+    font-size: 35px;
+  }
+
+  .login-form input {
+    font-size: 16px;
+  }
+
+  .login-form button {
+    font-size: 18px;
+    width: 235px;
+  }
+
+  .cancel-btn {
+    font-size: 16px;
+  }
+}
+
+@media only screen and (min-width: 1200px) {
+  .LoginPage h2 {
+    font-size: 40px;
+  }
+
+  .login-form input {
+    font-size: 18px;
+  }
+
+  .login-form button {
+    font-size: 18px;
+    width: 265px;
+  }
+
+  .cancel-btn {
+    font-size: 18px;
+  }
+}

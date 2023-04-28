@@ -19,3 +19,25 @@
   font-family: "Montserrat", sans-serif;
   font-size: 18px;
 }
+
+/* Media queries */
+
+@media only screen and (min-width: 992px) {
+  .About h2 {
+    font-size: 40px;
+  }
+  .About p {
+    font-size: 20px;
+    max-width: 800px;
+  }
+}
+
+@media only screen and (min-width: 1200px) {
+  .About h2 {
+    font-size: 42px;
+  }
+  .About p {
+    font-size: 20px;
+    max-width: 800px;
+  }
+}
