@@ -25,7 +25,11 @@ app.use(express.json());
 
 app.use(
   cors({
-    origin: ["https://postcode-app.netlify.app", "http://localhost:3000"],
+    origin: [
+      "https://postcode-app.netlify.app",
+      "https://postcode-server.onrender.com",
+      "http://localhost:3000",
+    ],
   })
 );
 
