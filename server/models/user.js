@@ -10,10 +10,7 @@ const userSchema = new mongoose.Schema(
     password: { type: String, required: true },
     about: {
       type: String,
-      maxLength: [
-        150,
-        "About cannot exceed 150 characters, your about has {value} characters",
-      ],
+      maxLength: [150, "Your about has exceeded the 150 characters limit."],
     },
     posts: [{ type: mongoose.Schema.ObjectId, ref: "Post" }],
   },

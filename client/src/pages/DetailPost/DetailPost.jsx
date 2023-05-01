@@ -1,11 +1,9 @@
 import React, { useEffect, useState } from "react";
 import { Link, useNavigate, useParams } from "react-router-dom";
 import { getPost, removeBlog } from "../../utils/postService";
-// import useUser from "../../hooks/useUser";
 import "./DetailPost.css";
 
 function DetailPost() {
-  // const { user } = useUser();
   const { postID } = useParams();
   let navigate = useNavigate();
 
