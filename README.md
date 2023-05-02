@@ -47,7 +47,7 @@ To visualise the application's components, I mapped out the user's journey acros
 
 To keep myself on track, I used Todoist to break down each feature of the application into manageable tasks to focus on, and a planner to ensure I managed my time sensibly.
 
-I utilised Dribble for layout and colour theme inspiration and designed Postcode’s CSS on Excalidraw. Below are snippets of the CSS for the homepage and the user posts page:
+I utilised Dribbble for layout and colour theme inspiration and designed Postcode’s CSS on Excalidraw. Below are snippets of the CSS for the homepage and the user posts page:
 
 ![Homepage](./client/src/images/readme/homepage-css.png)
 
@@ -57,13 +57,13 @@ The infographic on the homepage and the icons across the application were source
 
 Infographic:
 
-- [Typing illustration](https://www.freepik.com/free-vector/code-typing-concept-illustration_10259340.htm) by[Storyset ](https://www.freepik.com/author/stories)
+- [Typing illustration](https://www.freepik.com/free-vector/code-typing-concept-illustration_10259340.htm) by [Storyset ](https://www.freepik.com/author/stories)
 
 Icons:
 
 - [Diagonal arrow](https://www.flaticon.com/free-icon/diagonal-arrow_2223606) by [Bqlqn](https://www.flaticon.com/authors/bqlqn)
 - [Plus icon](https://www.flaticon.com/free-icon/plus_3312174) by [Hajicon](https://www.flaticon.com/authors/hajicon)
-- [Pen icon](https://www.flaticon.com/free-icon/pen_1250615) by[Icongeek26](https://www.flaticon.com/authors/icongeek26)
+- [Pen icon](https://www.flaticon.com/free-icon/pen_1250615) by [Icongeek26](https://www.flaticon.com/authors/icongeek26)
 - [Trash icon](https://www.flaticon.com/free-icon/trash_3177276) by [Kmg design](https://www.flaticon.com/authors/kmg-design)
 
 ## Build/Code Process
@@ -72,9 +72,9 @@ Icons:
 
 After getting the application’s files set up, I created models for users and posts that reference each other and include validation.
 
-![User schema](./client/src/images/readme/user-schema)
+![User schema](./client/src/images/readme/user-schema.png)
 
-![Post schema](./client/src/images/readme/post-schema)
+![Post schema](./client/src/images/readme/post-schema.png)
 
 Next, I created two controller files, one for users and one for posts. The users controller includes functions for handling user login, registration and user about status updation.
 
@@ -96,7 +96,7 @@ With the server side now prepped, it was time to move on to the client side. The
 
 ### Client: User about and all posts
 
-Once a user has logged in or registered, they’re navigated to the posts route. In the top section are the user’s name and about status. Users can edit their about status by clicking on the edit icon, which navigates to a separate page. Below is the form portion of the edit component’s code:
+Once a user has logged in or registered, they’re navigated to the posts route. In the top section are the user’s name and about status. Users can edit their about status by clicking on the edit icon, which navigates to a separate page. Below is the form portion of the edit user about code:
 
 ![User posts code](./client/src/images/readme/user-posts-code.png)
 
@@ -104,13 +104,13 @@ Below the user's about status is a list of their posts ordered by the most recen
 
 ![User posts updated](./client/src/images/readme/postcode-userposts-new.png)
 
-Displaying these posts and the user about status in this posts route is a single GET request that will query the user database and populate a user's posts. The call for this is in the postService file in the utilities folder:
+Displaying these posts and the user about status on the posts route is a single GET request that will query the user database and populate a user's posts. The call for this is in the postService file in the utilities folder:
 
 ![User posts code](./client/src/images/readme/getposts-code.png)
 
 ### Client: Detail, edit, and delete pages
 
-To view a post, a user clicks on the title or “Read more” link of a post on the posts route. This component also enables users to delete a post. The code for displaying the post is a simple GET request that queries the posts database using the post’s ID. When clicked, the delete button will fire a DELETE request using the post’s ID.
+To view a post, a user clicks on the title or “Read more” link of a post on the posts route. This component also enables users to delete a post. The code for displaying the post is a simple GET request that queries the post database using the post’s ID. When clicked, the delete button will fire a DELETE request using the post’s ID.
 
 ![Detail code 1](./client/src/images/readme/detail-code-1.png)
 
@@ -122,7 +122,7 @@ Below is what the detail page looks like for the earlier created post:
 
 Clicking on the edit icon will navigate the user to the edit page. Within this component, I dynamically collect the data input and implement form validation. See below for code snippets:
 
-![Edit post code 1](./client/src/images/readme/edit-post-code-2.png)
+![Edit post code 1](./client/src/images/readme/edit-post-code-1.png)
 
 ![Edit post code 2](./client/src/images/readme/edit-post-code-2.png)
 
@@ -134,7 +134,7 @@ See below for the visualised process of editing a post and seeing its changes on
 
 ### Challenges
 
-The most fiddly part of this project was the delete post functionality., strangely. Despite being able to delete the post, I had some trouble figuring out how to asynchronously delete the post from the user’s record. What tremendously helped was to take a step back and look beyond the Mongoose and MongoDB commands and look at the code for what it really is, an object with a nested array. Stripping back the code to its basics thus enabled me to formulate a solution.
+The most fiddly part of this project was the delete post functionality, strangely. Despite being able to delete the post, I had some trouble figuring out how to asynchronously delete the post from the user’s record. What tremendously helped was to take a step back and look beyond the Mongoose and MongoDB commands and look at the code for what it really is, an object with a nested array. Stripping back the code to its basics thus enabled me to formulate a solution.
 
 ### Wins
 
