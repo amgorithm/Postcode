@@ -33,6 +33,7 @@
   border: 1px solid #332f50;
   border-radius: 3px;
   font-size: 14px;
+  width: 210px;
 }
 
 .signup-cancel-btns {
@@ -61,6 +62,7 @@
 
   .signup-form input {
     font-size: 15px;
+    width: 225px;
   }
 
   .signup-cancel-btns button {
@@ -76,6 +78,7 @@
 
   .signup-form input {
     font-size: 16px;
+    width: 235px;
   }
 
   .signup-cancel-btns button {
@@ -91,6 +94,7 @@
 
   .signup-form input {
     font-size: 18px;
+    width: 265px;
   }
 
   .signup-cancel-btns button {

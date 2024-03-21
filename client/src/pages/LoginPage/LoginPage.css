@@ -34,6 +34,7 @@
   border: 1px solid #332f50;
   border-radius: 3px;
   font-size: 14px;
+  width: 210px;
 }
 
 .login-cancel-btns {
@@ -71,6 +72,7 @@
 
   .login-form input {
     font-size: 15px;
+    width: 225px;
   }
 
   .login-form button {
@@ -90,6 +92,7 @@
 
   .login-form input {
     font-size: 16px;
+    width: 235px;
   }
 
   .login-form button {
@@ -109,6 +112,7 @@
 
   .login-form input {
     font-size: 18px;
+    width: 265px;
   }
 
   .login-form button {
